@@ -80,7 +80,7 @@
       const filtered = employees.filter(emp =>
         emp.Initial?.toLowerCase().includes(value) ||
         emp["ชื่อ (ไทย)"]?.toLowerCase().includes(value) ||
-        emp["ชื่อเล่น"]?.toLowerCase().includes(value)
+        emp["ชื่อเล่น"]?.toLowerCase().includes(value) || emp["รหัสพนักงาน"]?.toString().toLowerCase().includes(value)
       );
 
       if (filtered.length === 0) {
